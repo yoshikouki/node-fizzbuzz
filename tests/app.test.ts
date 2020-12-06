@@ -1,7 +1,11 @@
-const app = require('../src/app')
+import { toFizzBuzz } from "../src/lib/FizzBuzz";
 
-test('app.ts のテスト', () => {
-  console.log = jest.fn()
-  app()
-  expect(console.log.mock.calls[0][0]).toBe(1)
+test('ユニットテスト #toFizzBuzz', () => {
+  expect(toFizzBuzz(1)).toBe(1)
+  expect(toFizzBuzz(3)).toBe('Fizz')
+  expect(toFizzBuzz(5)).toBe('Buzz')
+  expect(toFizzBuzz(15)).toBe('FizzBuzz')
+  expect(toFizzBuzz(95)).toBe('FizzBuzz')
+  expect(toFizzBuzz(99)).toBe('Fizz')
+  expect(toFizzBuzz(100)).toBe('Buzz')
 })
