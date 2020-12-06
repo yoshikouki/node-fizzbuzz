@@ -1,6 +1,14 @@
 export function toFizzBuzz(num: number) {
-  if (num % 3 == 0 && num % 5 == 0) { return 'FizzBuzz' }
-  if (num % 3 == 0) { return 'Fizz' }
-  if (num % 5 == 0) { return 'Buzz' }
+  if (isFizz(num) && isBuzz(num)) { return 'FizzBuzz' }
+  if (isFizz(num)) { return 'Fizz' }
+  if (isBuzz(num)) { return 'Buzz' }
   return num
+}
+
+function isFizz(num: number) {
+  return num % 3 == 0
+}
+
+function isBuzz(num: number) {
+  return num % 5 == 0
 }
