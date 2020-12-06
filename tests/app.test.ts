@@ -1,5 +1,7 @@
 const app = require('../src/app')
 
 test('app.ts のテスト', () => {
-  expect(app.app()).toBe(1)
+  console.log = jest.fn()
+  app()
+  expect(console.log.mock.calls[0][0]).toBe(1)
 })

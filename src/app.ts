@@ -1,5 +1,7 @@
-export function app() {
+const game = () => {
   console.log(1)
 }
 
-app()
+module.exports = game
+
+game()
