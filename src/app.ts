@@ -1,4 +1,4 @@
-export const app = () => {
+export function app() {
   console.log(1)
 }
 
